@@ -1,0 +1,37 @@
+G:
+cd Programs\xampp\htdocs\itempromo\wp-content\themes\template-shop\web
+npm init -y
+npm install webpack webpack-cli --save-dev
+
+	//Подключение lodash
+	npm install --save lodash
+
+	//Подключение jQuery (нужно для бутстрапа)
+	npm install jquery -D
+
+	//Подключение Popper (нужно для бутстрапа)
+	npm install popper.js -D
+
+	//Плагин для вывода стилей отдельным файлом
+	npm install --save-dev mini-css-extract-plugin
+
+	//Плагины для вывода стилей css и scss в js и head
+	npm install css-loader sass-loader style-loader --save-dev (стили подключаются в основной файл js)
+	
+	//Добавление шрифтов
+	npm install url-loader --save-dev
+	
+	//Оптимизация изображений
+	npm install image-webpack-loader --save-dev
+
+//Создание бандла с учетом конфигурации
+npx webpack --config webpack.config.js
+
+//Создание бандла
+npx webpack
+
+//Запуск ярлыка создания бандла
+npm run build
+
+//Запуск автовыполнения при изменении файла
+npm run watch
